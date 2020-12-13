@@ -27,22 +27,17 @@ for (var i = 0; i < dayHour.length; i++){
 }
 
 //save what the user entered into local storage
-
-
-getLocal()
-function getLocal (){
-    $("textarea").value = localStorage.getItem("plans");
+function getLocal(){
+    ("textarea")[dayHour].value = localStorage.getItem("event");
 }
 
+var localId =[0,1,2,3,4,5,6,7,8,9]
 $("button").on("click", function(event) {
     event.preventDefault();
+    var textArea1 = $("textarea")[dayHour].value;
 
-    $("textarea")[0].value = localStorage.getItem("plans");
-    localStorage.setItem("plans", $("textarea").value);
-
-    
+    localStorage.setItem("event", textArea1);
 });
-
 
 //make a function to change the colors based on past, present, future
 function hourColorFunction() {
